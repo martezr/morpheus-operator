@@ -1,7 +1,7 @@
 apiVersion: infrastructure.morpheusdata.com/v1
 kind: VsphereInstance
 metadata:
-  name: kubedemo2
+  name: kubedemo1
   labels:
     app: mongodb
 spec:
