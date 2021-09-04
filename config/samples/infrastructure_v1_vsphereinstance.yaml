@@ -1,0 +1,19 @@
+apiVersion: infrastructure.morpheusdata.com/v1
+kind: VsphereInstance
+metadata:
+  name: kubedemo2
+  labels:
+    app: mongodb
+spec:
+  cloudId: 2
+  groupId: 1
+  instanceTypeCode: mongodb-ansible
+  instanceLayoutId: 1166
+  planId: 355
+  environment: production
+  resourcePoolId: 7
+  networkId: 2
+  customOptions:
+    mongodb_version: "4.2"
+    mongodb_username: "root"
+    mongodb_password: "password123"

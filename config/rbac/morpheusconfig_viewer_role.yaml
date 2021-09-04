@@ -1,0 +1,20 @@
+# permissions for end users to view morpheusconfigs.
+apiVersion: rbac.authorization.k8s.io/v1
+kind: ClusterRole
+metadata:
+  name: morpheusconfig-viewer-role
+rules:
+- apiGroups:
+  - infrastructure.morpheusdata.com
+  resources:
+  - morpheusconfigs
+  verbs:
+  - get
+  - list
+  - watch
+- apiGroups:
+  - infrastructure.morpheusdata.com
+  resources:
+  - morpheusconfigs/status
+  verbs:
+  - get

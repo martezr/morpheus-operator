@@ -1,0 +1,28 @@
+domain: morpheusdata.com
+layout:
+- go.kubebuilder.io/v3
+plugins:
+  manifests.sdk.operatorframework.io/v2: {}
+  scorecard.sdk.operatorframework.io/v2: {}
+projectName: morpheus-operator
+repo: github.com/martezr/morpheus-operator
+resources:
+- api:
+    crdVersion: v1
+    namespaced: true
+  controller: true
+  domain: morpheusdata.com
+  group: infrastructure
+  kind: Vsphere
+  path: github.com/martezr/morpheus-operator/api/v1
+  version: v1
+- api:
+    crdVersion: v1
+    namespaced: true
+  controller: true
+  domain: morpheusdata.com
+  group: infrastructure
+  kind: MorpheusConfig
+  path: github.com/martezr/morpheus-operator/api/v1
+  version: v1
+version: "3"

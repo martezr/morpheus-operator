@@ -1,0 +1,8 @@
+apiVersion: v1
+kind: Secret
+metadata:
+  name: morpheus-credentials
+data:
+  url: aHR0cHM6Ly9ncnRtb3JwaGV1czAxLmdydC5sb2NhbA==
+  username: YWRtaW4=
+  password: cGFzc3dvcmQxMjM=

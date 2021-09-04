@@ -1,0 +1,60 @@
+
+---
+apiVersion: rbac.authorization.k8s.io/v1
+kind: ClusterRole
+metadata:
+  creationTimestamp: null
+  name: manager-role
+rules:
+- apiGroups:
+  - infrastructure.morpheusdata.com
+  resources:
+  - morpheusconfigs
+  verbs:
+  - create
+  - delete
+  - get
+  - list
+  - patch
+  - update
+  - watch
+- apiGroups:
+  - infrastructure.morpheusdata.com
+  resources:
+  - morpheusconfigs/finalizers
+  verbs:
+  - update
+- apiGroups:
+  - infrastructure.morpheusdata.com
+  resources:
+  - morpheusconfigs/status
+  verbs:
+  - get
+  - patch
+  - update
+- apiGroups:
+  - infrastructure.morpheusdata.com
+  resources:
+  - vsphereinstance
+  verbs:
+  - create
+  - delete
+  - get
+  - list
+  - patch
+  - update
+  - watch
+- apiGroups:
+  - infrastructure.morpheusdata.com
+  resources:
+  - vsphereinstances/finalizers
+  verbs:
+  - update
+- apiGroups:
+  - infrastructure.morpheusdata.com
+  resources:
+  - vsphereinstances/status
+  verbs:
+  - get
+  - patch
+  - update
